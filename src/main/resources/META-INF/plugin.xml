@@ -8,23 +8,24 @@
     <name>AarSourcesFixup</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="sxwang.me@gmail.com" url="https://wsxyeah.github.io">Shaoxing</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    <p>This will help when your IDE cannot find appropriate sources for your aar library. </p><p>Just click "Download<Fixup>" button on the popup toolbar.</p><p>See <a href="https://issuetracker.google.com/u/1/issues/247991770">issues/247991770</a></p>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.gradle</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <attachSourcesProvider implementation="dev.shaoxing.aarsourcesfixup.AarAttachSourceProvider"/>
     </extensions>
 </idea-plugin>
