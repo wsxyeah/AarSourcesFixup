@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "dev.shaoxing"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -35,7 +35,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("222")
-        untilBuild.set("232.*")
+        untilBuild.set("233.*")
     }
 
     signPlugin {
